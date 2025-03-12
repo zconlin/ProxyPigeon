@@ -8,6 +8,14 @@ When setting up Muraena and using the command-line tool certbot, the error messa
 ## certbot certificate
 To get a certificate using certbot, start an apache server, then follow instructions from https://muraena.phishing.click/infra/run. This URL recommends using certbot with the --manual option, which means manually creating files on the apache server. The --manual can be omitted to automate this process.
 
+Here are the full steps:
+1. Make sure there are no proxies or websites running, since certbot needs to use the website ports.
+2. certbot certonly -v --server https://acme-v02.api.letsencrypt.org/directory --agree-tos -d httpcarrierpigeons.xyz
+3. Select option 1 for having certbot do the steps automatically.
+    - The output will show the location of the stored certificates.
+4. cat fullchain.pem privkey.pem > combined.pem
+    - Some proxies need a combined.pem file that has both the private key and the full chain in it.
+
 
 ## How to get certificates using zerossl 
 The zerossl certificate authority lets us use the website directly to get a certificate without worrying about firewall rules on our server.

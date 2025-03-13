@@ -11,4 +11,6 @@
     backend http_backend
 	server server1 fingerprint.byu.edu:443 ssl verify none
     ```
-3. systemctl restart haproxy
+3. ```
+    systemctl restart haproxy
+    ```

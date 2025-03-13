@@ -10,10 +10,14 @@ To get a certificate using certbot, follow the instructions from https://muraena
 
 Here are the full steps:
 1. Make sure there are no proxies or websites running, since certbot needs to use the website ports.
-2. ```certbot certonly -v --server https://acme-v02.api.letsencrypt.org/directory --agree-tos -d httpcarrierpigeons.xyz```
+2. ```
+    certbot certonly -v --server https://acme-v02.api.letsencrypt.org/directory --agree-tos -d httpcarrierpigeons.xyz
+    ```
 3. Select option 1 for having certbot do the steps automatically.
     - The output will show the location of the stored certificates.
-4. ```cat fullchain.pem privkey.pem > combined.pem```
+4. ```
+    cat fullchain.pem privkey.pem > combined.pem
+    ```
     - Some proxies need a combined.pem file that has both the private key and the full chain in it.
 
 

@@ -15,7 +15,9 @@ Here are the steps to set up mitmproxy:
     pip install mitmproxy
     ```
 3. Download the certificates using certbot. See [Certificates.md](Certificates.md).
-4. nohup mitmdump –mode reverse:https://fingerprint.byu.edu –listen-host 0.0.0.0 –listen-port 443 --set block_global=false --certs mitmproxy.httpcarrierpigeons.xyz=/etc/letsencrypt/live/mitmproxy.httpcarrierpigeons.xyz/combined.pem
+4. ```
+    nohup mitmdump –mode reverse:https://fingerprint.byu.edu –listen-host 0.0.0.0 –listen-port 443 --set block_global=false --certs mitmproxy.httpcarrierpigeons.xyz=/etc/letsencrypt/live/mitmproxy.httpcarrierpigeons.xyz/combined.pem
+    ```
 
 # Testing
 Steps to test after setting up with previous steps:

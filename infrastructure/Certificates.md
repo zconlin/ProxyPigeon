@@ -2,7 +2,7 @@
 Some proxies were not able to retrieve website certificates from within BYU's infrastructure.
 Evilginx is supposed to automatically retrieve a certificate when enabling a phishlet. It seemed to sometimes work and other times not.
 
-When setting up Muraena and using the command-line tool certbot, the error messages showed that certain temporary urls on the server had their connection reset (even though those same urls could be copied and pasted into the browser or curl them and they worked fine). We believe that BYU's firewall blocks bots and detected Let's Encrypt (the certificate issuer) as a bot.
+When setting up Muraena and using the command-line tool certbot, the error messages showed that certain temporary urls on the server had their connection reset (even though those same urls could be copied and pasted into the browser or curl them - if using certbot's manual option for debugging purposes - and they worked fine). We believe that BYU's firewall blocks bots and detected Let's Encrypt (the certificate issuer) as a bot.
 
 # Get Certificates
 ## certbot certificate

@@ -19,7 +19,9 @@ Here are the steps to set up mitmproxy:
 
 # Testing
 Steps to test after setting up with previous steps:
-1. source myenv/bin/activate
+1. ```
+    source myenv/bin/activate
+    ```
 2. ```
     mitmdump –mode reverse:https://fingerprint.byu.edu –listen-host 0.0.0.0 –listen-port 443 --set block_global=false --certs mitmproxy.httpcarrierpigeons.xyz=/etc/letsencrypt/live/mitmproxy.httpcarrierpigeons.xyz/combined.pem`
     ``
